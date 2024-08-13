@@ -1,0 +1,24 @@
+<html method="post">
+    <head>
+        <meta charset="UTF-8">
+        <title> Index </title>
+    </head>
+    <body>
+        <div style="text-align: center; margin-top: 200px;">
+            <button onclick="window.location.href='/storage';">Storage</button>
+            <button onclick="window.location.href='/workshop';">Workshop</button>
+            <button onclick="window.location.href='/archive';">Archive</button>
+        </div>
+    
+        <div>
+            <h1>ADD BIKE</h1>
+				<form action="{{ url_for('index') }}" method="post">
+				<div class="msg">{{ msg }}</div>
+					<input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/></br></br>
+					<input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/></br></br>
+					<input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox"/></br></br>
+					<input type="submit" class="btn" value="Sign Up" name="submit"></br>
+				</form>           
+        </div>
+    </body>
+</html>
