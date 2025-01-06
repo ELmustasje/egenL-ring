@@ -1,14 +1,16 @@
+mod myModule;
+
 fn main() {
     //let result = double(32);
     //blocks();
     //scope();
     //visibility();
     //ownership();
-    //reference();
+    reference();
     //variables();
     //mut_reference();
     //macros();
-    attributes();
+    //attributes();
 }
 
 fn double(num: u128) -> u128 {
@@ -95,7 +97,13 @@ fn reference() {
     let borrow_num1 = &mut owner_num1;
 
     let new_value = *borrow_num1 * 2;
+    *borrow_num1 = *borrow_num1 + 1; //since it borrwos the value, owner will also change
     println!("{new_value}");
+    println!("{borrow_num1}");
+
+    //now the borrow is over
+    owner_num1 += 1;
+    println!("{owner_num1}");
 }
 
 fn variables() {
