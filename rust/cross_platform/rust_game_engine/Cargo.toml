@@ -1,0 +1,10 @@
+[package]
+name = "rust_game_engine"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+jni = "0.20.0" # Replace with the latest version of the crate

@@ -1,7 +1,7 @@
 use core::panic;
 use std::fs::File;
 use std::io::Read;
-use std::{path::Path, str::FromStr};
+use std::path::Path;
 
 fn main() {
     println!("Hello, world!");
@@ -37,6 +37,5 @@ fn get_input_parts(str: String) -> (Vec<String>, Vec<String>) {
             left.push(l.to_string());
         }
     }
-
     (left, right)
 }
